@@ -45,8 +45,8 @@ nav {
     text-align: center;
     background: #000;
     color: #fff;
-    border-radius: 50px;
-    margin: 20px 20px 0 20px; /* Removed bottom margin to let pill overlap */
+    border-radius: 50px; /* Rounded Corners */
+    margin: 20px 20px 0 20px;
     position: relative;
     z-index: 1;
 }
@@ -68,7 +68,7 @@ nav {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: -25px; /* Pulls the whole container up to straddle the line */
+    margin-top: -25px;
     margin-bottom: 4rem;
     position: relative;
     z-index: 10;
@@ -115,7 +115,7 @@ nav {
 .three-doors {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 40px; /* Increased gap for better spacing */
+    gap: 40px;
     margin: 4rem auto 6rem;
     max-width: 1200px;
     padding: 0 20px;
@@ -150,15 +150,15 @@ nav {
     content: "—"; position: absolute; left: 0; color: #999;
 }
 
-/* 8. Testimonials */
+/* 8. Testimonials (UPDATED: Rounded Corners) */
 .testimonials { 
     background: #f4f4f4; 
     color: #000; 
     padding: 6rem 5%; 
     text-align: center; 
     position: relative; 
-    border-radius: 50px; 
-    margin: 40px 20px 6rem 20px; 
+    border-radius: 50px; /* MATCHES HERO */
+    margin: 40px 20px 6rem 20px; /* Margins ensure corners are visible */
 }
 .testimonial-container { max-width: 800px; margin: 0 auto; min-height: 200px; display: flex; align-items: center; justify-content: center; }
 .testimonial-slide { display: none; animation: fadeEffect 1s; }
@@ -186,11 +186,11 @@ nav {
 .team-member { text-align: center; }
 .team-member img {
     margin: 0 auto 1.5rem;
-    height: 250px; /* Fixed height for consistency */
+    height: 250px;
     width: 250px;
     object-fit: cover;
-    border-radius: 50%; /* Circular images */
-    filter: grayscale(100%); /* Elegant B&W look */
+    border-radius: 50%;
+    filter: grayscale(100%);
 }
 .team-member h3 { font-size: 1.2rem; margin-bottom: 0.5rem; }
 .team-member p { font-size: 0.9rem; color: #666; margin-bottom: 1.5rem; line-height: 1.4; }
@@ -211,20 +211,19 @@ nav {
 .btn-submit:hover { background: #333; }
 
 /* 11. Footer & Bottom Pill */
-/* Container to hold pill and footer together */
 .footer-wrapper {
     position: relative;
     margin-top: 6rem;
 }
 .pill-bottom {
     position: absolute;
-    top: -25px; /* Pulls it up exactly half its height */
+    top: -25px;
     left: 50%;
     transform: translateX(-50%);
     z-index: 10;
 }
 footer { 
-    padding: 6rem 5% 4rem; /* Increased top padding to clear pill */
+    padding: 6rem 5% 4rem;
     background: #000; 
     color: #fff; 
     text-align: center; 
@@ -242,5 +241,7 @@ footer {
     nav { flex-direction: column; padding: 1rem; }
     .nav-links { display: flex; flex-direction: column; gap: 1rem; margin-top: 1rem; width: 100%; text-align: center; }
     .pill-divider { padding: 12px 30px; font-size: 0.75rem; }
+    /* Ensure margins on mobile allow rounding to be visible */
     .hero { margin: 20px 10px 0 10px; }
+    .testimonials { margin: 40px 10px 6rem 10px; }
 }
