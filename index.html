@@ -22,81 +22,76 @@
 
     <main>
         
-<header class="hero">
-    <h1>Clarity in Complexity.</h1>
-    <p class="hero-sub">We align your brand, your strategy, and your people to drive measurable growth.</p>
-</header>
+        <header class="hero">
+            <h1>Clarity in Complexity.</h1>
+            <p class="hero-sub">We align your brand, your strategy, and your people to drive measurable growth.</p>
+        </header>
 
-<section class="three-doors">
-    <div class="door">
-        <img src="marketing icon.jpg" alt="Marketing Services">
-        <h3>Marketing</h3>
-        <p>Strategic messaging, branding, and creative execution that builds market share.</p>
-        <a href="marketing.html" class="btn-link">Explore Services</a>
-    </div>
-    <div class="door">
-        <img src="strategy icon.jpg" alt="Strategic Services">
-        <h3>Strategy</h3>
-        <p>Operational problem solving, change management, and strategic planning.</p>
-        <a href="strategy.html" class="btn-link">Explore Services</a>
-    </div>
-    <div class="door">
-        <img src="training icon.jpg" alt="Training Services">
-        <h3>Training</h3>
-        <p>Instructional design, leadership development, and facilitation.</p>
-        <a href="training.html" class="btn-link">Explore Services</a>
-    </div>
-</section>
+        <div class="pill-divider">Find Clarity Now</div>
 
-<section class="testimonials">
-    <h2>Client Impact</h2>
-    <div class="testimonial-container">
-        
-        <div class="testimonial-slide active">
-            <div class="quote">"John and his team did the impossible... He completed 6 months of work in just a few weeks. FAR beyond our wildest expectations!"</div>
-            <cite>— Stephen Andersen, CEO FGR8</cite>
-        </div>
+        <h3 class="section-intro">We provide broad services that help you succeed at all stages.</h3>
 
-        <div class="testimonial-slide">
-            <div class="quote">"Amazingly effective... presented leadership in ways never explained to me before. I would love to experience it all over again!"</div>
-            <cite>— Justin P., Founder</cite>
-        </div>
-        
-        <div class="testimonial-slide">
-            <div class="quote">"John really took the time to understand our business and crafted a content strategy that married to our goals. He became a trusted advisor."</div>
-            <cite>— Richard Barrett, Director of Marketing, Workvivo</cite>
-        </div>
+        <section class="three-doors">
+            <div class="door">
+                <img src="marketing icon.jpg" alt="Marketing Services">
+                <h3>Marketing</h3>
+                <p>Strategic messaging, branding, and creative execution that builds market share.</p>
+                <a href="marketing.html" class="btn-link">Explore Services</a>
+            </div>
+            <div class="door">
+                <img src="strategy icon.jpg" alt="Strategic Services">
+                <h3>Strategy</h3>
+                <p>Operational problem solving, change management, and strategic planning.</p>
+                <a href="strategy.html" class="btn-link">Explore Services</a>
+            </div>
+            <div class="door">
+                <img src="training icon.jpg" alt="Training Services">
+                <h3>Training</h3>
+                <p>Instructional design, leadership development, and facilitation.</p>
+                <a href="training.html" class="btn-link">Explore Services</a>
+            </div>
+        </section>
 
-        <div class="testimonial-slide">
-            <div class="quote">"Your session was a huge hit, very engaging, and the team got a lot of value out of it."</div>
-            <cite>— Senior Leader, NAV CANADA</cite>
-        </div>
+        <div style="text-align: center; font-size: 2rem; margin-bottom: 2rem;">&darr;</div>
 
-    </div>
-</section>
+        <section class="testimonials">
+            <div class="testimonial-container">
+                
+                <div class="testimonial-slide active">
+                    <div class="quote">"John really took the time to understand our business and crafted a content strategy that married to our goals. He became a trusted advisor."</div>
+                    <cite>— Richard Barrett, Director of Marketing, Workvivo</cite>
+                </div>
 
-<script>
-    // Simple script to cycle testimonials every 5 seconds
-    let slideIndex = 0;
-    const slides = document.querySelectorAll(".testimonial-slide");
-    
-    function showSlides() {
-        slides.forEach(slide => slide.classList.remove("active"));
-        slideIndex++;
-        if (slideIndex > slides.length) {slideIndex = 1}
-        slides[slideIndex - 1].classList.add("active");
-        setTimeout(showSlides, 5000); 
-    }
-    
-    if(slides.length > 0) {
-        setTimeout(showSlides, 5000);
-    }
-</script>
+                <div class="testimonial-slide">
+                    <div class="quote">"John and his team did the impossible... He completed 6 months of work in just a few weeks. FAR beyond our wildest expectations!"</div>
+                    <cite>— Stephen Andersen, CEO FGR8</cite>
+                </div>
+
+                <div class="testimonial-slide">
+                    <div class="quote">"Amazingly effective... presented leadership in ways never explained to me before. I would love to experience it all over again!"</div>
+                    <cite>— Justin P., Founder</cite>
+                </div>
+            </div>
+        </section>
+
+        <script>
+            let slideIndex = 0;
+            const slides = document.querySelectorAll(".testimonial-slide");
+            function showSlides() {
+                slides.forEach(slide => slide.classList.remove("active"));
+                slideIndex++;
+                if (slideIndex > slides.length) {slideIndex = 1}
+                slides[slideIndex - 1].classList.add("active");
+                setTimeout(showSlides, 5000); 
+            }
+            if(slides.length > 0) { setTimeout(showSlides, 5000); }
+        </script>
 
     </main>
 
+    <div class="pill-divider pill-bottom">Get in Touch</div>
+
     <footer>
-        
         <div class="footer-links">
             <a href="contact.html">Contact Us</a>
             <a href="marketing.html">Marketing</a>
@@ -113,11 +108,11 @@
         <div class="partners-list">
             <strong>Partners:</strong><br>
             <a href="https://www.linkedin.com/in/iamjdcollins/" target="_blank" rel="noopener noreferrer">John Collins</a>
-            <a href="https://www.linkedin.com/in/robertlzackeryiii/" target="_blank" rel="noopener noreferrer">Robert Zackery</a>
+            <a href="https://www.linkedin.com/in/robertlzackeryiii/" target="_blank" rel="noopener noreferrer">Robert Zackary</a>
             <a href="https://www.linkedin.com/in/collins4learning/" target="_blank" rel="noopener noreferrer">Mary Collins</a>
         </div>
 
-        <p class="copyright">&copy; 2025 Collins|Zackery. All Rights Reserved.</p>
+        <p class="copyright">&copy; 2025 Collins/Zackery. All Rights Reserved.</p>
     </footer>
 
 </body>
