@@ -1,4 +1,4 @@
-/* COLLINS | ZACKERY - UPDATED DESIGN */
+/* COLLINS | ZACKERY - FINAL DESIGN */
 
 /* 1. Base Styles */
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -26,10 +26,15 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 2rem 5%;
+    padding: 1.5rem 5%;
     background: #fff;
 }
-.logo { font-size: 1.5rem; letter-spacing: 3px; font-weight: 600; text-transform: uppercase; }
+/* Header Logo Image */
+.logo-img-nav {
+    height: 80px; 
+    width: auto;
+    display: block;
+}
 .nav-links { display: flex; gap: 2rem; align-items: center; }
 .nav-links a { text-transform: uppercase; font-size: 0.8rem; letter-spacing: 1px; }
 .btn-nav { 
@@ -69,11 +74,10 @@ nav {
     flex-direction: column;
     align-items: center;
     margin-top: -25px;
-    margin-bottom: 2rem; /* Reduced bottom margin to bring logos closer */
+    margin-bottom: 4rem;
     position: relative;
     z-index: 10;
 }
-
 .pill-divider {
     background-color: #f0f0f0;
     color: #000;
@@ -86,21 +90,19 @@ nav {
     display: inline-block; 
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
-
 .arrow-down {
     font-size: 2rem;
     color: #222;
     margin-top: 1rem;
     animation: bounce 2s infinite;
 }
-
 @keyframes bounce {
     0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
     40% {transform: translateY(-5px);}
     60% {transform: translateY(-3px);}
 }
 
-/* 5. NEW: Scrolling Logo Banner */
+/* 5. Scrolling Logo Banner */
 .logo-scroller {
     width: 100%;
     overflow: hidden;
@@ -109,41 +111,31 @@ nav {
     white-space: nowrap;
     position: relative;
 }
-
 .logo-track {
     display: flex;
     align-items: center;
-    width: max-content; /* Allows container to grow with content */
+    width: max-content;
     animation: scroll 40s linear infinite;
 }
-
 .logo-track img {
-    height: 60px; /* Fixed height for uniformity */
+    height: 60px;
     width: auto;
-    margin: 0 40px; /* Spacing between logos */
-    filter: grayscale(100%); /* B&W by default */
+    margin: 0 40px;
+    filter: grayscale(100%);
     opacity: 0.7;
     transition: all 0.3s ease;
     cursor: pointer;
 }
-
-/* Hover Effects */
 .logo-track img:hover {
-    filter: grayscale(0%); /* Color on hover */
+    filter: grayscale(0%);
     opacity: 1;
-    transform: scale(1.1); /* Slight pop */
+    transform: scale(1.1);
 }
-
-/* Pause scrolling on hover for better viewing */
-.logo-track:hover {
-    animation-play-state: paused;
-}
-
+.logo-track:hover { animation-play-state: paused; }
 @keyframes scroll {
     0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); } /* Moves half way (one set of logos) */
+    100% { transform: translateX(-50%); }
 }
-
 
 /* 6. Section Intro Line */
 .section-intro {
@@ -182,7 +174,7 @@ nav {
     border-bottom: 1px solid #000; padding-bottom: 3px; 
 }
 
-/* 8. Content Layouts (Service Pages) */
+/* 8. Content Layouts */
 .page-container { max-width: 1100px; margin: 0 auto; padding: 4rem 5%; }
 .service-section { 
     display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; margin-bottom: 6rem; align-items: center; 
@@ -195,7 +187,7 @@ nav {
     content: "—"; position: absolute; left: 0; color: #999;
 }
 
-/* 9. Testimonials (Rounded) */
+/* 9. Testimonials */
 .testimonials { 
     background: #f4f4f4; 
     color: #000; 
@@ -210,12 +202,11 @@ nav {
 .testimonial-slide.active { display: block; }
 .quote { font-size: 1.5rem; font-family: 'Didot', serif; margin-bottom: 1.5rem; font-style: italic; line-height: 1.4; color: #222; }
 .cite { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; opacity: 0.7; display: block; margin-top: 1rem; color: #000; }
-
 @keyframes fadeEffect {
     from {opacity: 0;} to {opacity: 1;}
 }
 
-/* 10. Team Preview Section (Home) */
+/* 10. Team Preview Section */
 .team-home {
     text-align: center;
     max-width: 1200px;
@@ -238,10 +229,7 @@ nav {
     filter: grayscale(100%);
     transition: filter 0.3s ease;
 }
-.team-member img:hover {
-    filter: grayscale(0%);
-    cursor: pointer;
-}
+.team-member img:hover { filter: grayscale(0%); cursor: pointer; }
 .team-member h3 { font-size: 1.2rem; margin-bottom: 0.5rem; }
 .team-member p { font-size: 0.9rem; color: #666; margin-bottom: 1.5rem; line-height: 1.4; }
 
@@ -261,10 +249,7 @@ nav {
 .btn-submit:hover { background: #333; }
 
 /* 12. Footer & Bottom Pill */
-.footer-wrapper {
-    position: relative;
-    margin-top: 6rem;
-}
+.footer-wrapper { position: relative; margin-top: 6rem; }
 .pill-bottom {
     position: absolute;
     top: -25px;
@@ -278,20 +263,48 @@ footer {
     color: #fff; 
     text-align: center; 
 }
+/* Footer Logo Image */
+.logo-img-footer {
+    max-width: 300px;
+    width: 100%;
+    margin: 0 auto 3rem;
+    display: block;
+}
 .footer-links { display: flex; justify-content: center; gap: 2rem; margin: 2rem 0; }
 .footer-links a { color: #fff; }
 .contact-info { margin: 2rem 0; font-size: 0.9rem; color: #ccc; }
 .partners-list a { color: #fff; border-bottom: 1px solid #555; }
 .copyright { font-size: 0.8rem; color: #777; margin-top: 3rem; }
 
+/* 13. Portfolio & Projects */
+.portfolio-container { max-width: 1200px; margin: 0 auto 6rem; padding: 0 5%; }
+.portfolio-intro { text-align: center; margin-bottom: 4rem; border-top: 1px solid #eee; padding-top: 6rem; }
+.portfolio-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
+a.portfolio-item { display: block; text-align: left; margin-bottom: 2rem; cursor: pointer; color: inherit; }
+.portfolio-item img { width: 100%; height: 250px; object-fit: cover; border-radius: 4px; filter: grayscale(100%); transition: all 0.4s ease; margin-bottom: 1rem; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+.portfolio-item:hover img { filter: grayscale(0%); transform: translateY(-5px); box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
+.portfolio-item h3 { font-size: 1.1rem; margin-bottom: 0.2rem; text-transform: uppercase; letter-spacing: 1px; }
+.portfolio-item p { font-size: 0.9rem; color: #666; font-style: italic; font-family: 'Didot', serif; }
+
+.project-hero { height: 60vh; background-size: cover; background-position: center; position: relative; margin-bottom: 4rem; }
+.project-hero::after { content: ""; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.4); }
+.project-title { position: absolute; bottom: 4rem; left: 5%; color: #fff; z-index: 2; max-width: 800px; }
+.project-title h1 { color: #fff; font-size: 3.5rem; margin-bottom: 0.5rem; }
+.project-title p { font-size: 1.2rem; opacity: 0.9; }
+.project-content { max-width: 800px; margin: 0 auto 6rem; padding: 0 5%; font-size: 1.1rem; }
+.project-content h3 { font-size: 1.5rem; margin-top: 3rem; margin-bottom: 1rem; }
+.project-content p { margin-bottom: 1.5rem; color: #444; }
+
 /* Mobile */
 @media (max-width: 768px) {
     .hero h1 { font-size: 2.5rem; }
-    .three-doors, .service-section, .team-grid { grid-template-columns: 1fr; }
+    .three-doors, .service-section, .team-grid, .portfolio-grid { grid-template-columns: 1fr; }
     nav { flex-direction: column; padding: 1rem; }
     .nav-links { display: flex; flex-direction: column; gap: 1rem; margin-top: 1rem; width: 100%; text-align: center; }
     .pill-divider { padding: 12px 30px; font-size: 0.75rem; }
     .hero { margin: 20px 10px 0 10px; }
     .testimonials { margin: 40px 10px 6rem 10px; }
-    .logo-track img { height: 40px; margin: 0 20px; } /* Smaller logos on mobile */
+    .logo-track img { height: 40px; margin: 0 20px; }
+    .project-hero { height: 40vh; }
+    .project-title h1 { font-size: 2.5rem; }
 }
